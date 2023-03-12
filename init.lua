@@ -1,20 +1,18 @@
 -- based on https://vonheikemen.github.io/devlog/tools/build-your-first-lua-config-for-neovim/
 
 
+-- ========================================================================== --
+-- ==                           EDITOR SETTINGS                            == --
+-- ========================================================================== --
 local set = vim.opt
 
 set.number 	= true
 set.relativenumber = true
 set.mouse 	= 'a'
-
 --Set autoindent
 set.autoindent = true
-
 --Set UTF-8 encoding
 set.encoding = 'utf-8'
-
-set.wildignore:append { '*/node_modules/*' }
-
 set.ignorecase 	= true
 set.smartcase 	= true
 -- highlight search
@@ -25,21 +23,28 @@ set.wrap 	= true
 set.breakindent = true
 -- The amount of space on screen a Tab character can occupy. The default value is 8. I think 2 is fine.
 set.tabstop 	= 2
-
 -- Amount of characters Neovim will use to indent a line. This option influences the keybindings << and >>. The default value is 8. Most of the time we want to set this with same value as tabstop.
 set.shiftwidth	= 2
 -- Controls whether or not Neovim should transform a Tab character to spaces. The default value is false.
 set.expandtab	= false
 
+set.wildignore:append { '*/node_modules/*' }
+
+-- ================================================================
+-- ==														Keymaps													===
+-- ================================================================
+
+-- vim.keymap.set({mode}, {combination}, {action}, {opts})
 
 local keymap = vim.keymap
 
 vim.g.mapleader = ' '
--- vim.keymap.set({mode}, {combination}, {action}, {opts})
 
--- Select all
+vim.keymap.set({'n', 'x', 'o'}, '<leader>h', '^') -- similar to 0
+vim.keymap.set({'n', 'x', 'o'}, '<leader>l', 'g_') -- similar to $
+-- Select all, select one
+keymap.set('n', '<leader>a', ':keepjumps normal! ggVG<cr>')
 keymap.set('n', '<C-a>', 'gg<S-v>G')
-keymap.set('n', '<leader>a', 'gg<S-v>G')
 
 -- New tab
 keymap.set('n', 'te', ':tabedit')
@@ -63,7 +68,22 @@ keymap.set({'n', 'x'}, 'cv', 	'"+p')
 keymap.set({'n', 'x'}, 'x', '"_x')
 
 keymap.set('n', '<leader>a', ':keepjumps normal! ggVG<cr>')
+-- Lexplore
+keymap.set('n', '<leader>e', '<cmd>Lexplore<cr>')
+keymap.set('n', '<leader><leader>', '<leader>e', {remap = true})
 
+
+-- ========================================================================== --
+-- ==                               COMMANDS                               == --
+-- ========================================================================== --
+
+vim.api.nvim_create_user_command('ReloadConfig', 'source $MYVIMRC', {})
+
+
+
+-- =============================
+-- == 		Plug 							====
+-- =============================
 
 
 local lazy = {}
@@ -84,7 +104,7 @@ end
 
 
 function lazy.setup(plugins) 
-	--lazy.install(lazy.path)
+	lazy.install(lazy.path)
 
   vim.opt.rtp:prepend(lazy.path)
   require('lazy').setup(plugins, lazy.opts)
@@ -99,21 +119,22 @@ lazy.setup({
   {'nvim-lualine/lualine.nvim'},
 })
 
+-- for material 
+vim.g.material_terminal_italics = 1
+vim.g.material_theme_style =  'lighter-community' 
 
 vim.opt.termguicolors = true
 
-vim.g.material_terminal_italics = 1
-vim.g.material_theme_style =  'lighter-community' 
 
 vim.cmd.colorscheme('tokyonight-day')
 
 require('lualine').setup({
 	options = {
-		icons_enabled = true
+		icons_enabled = true,
+		theme = 'tokyonight-day',
+    component_separators = '|-|',
+    section_separators = '---',
 	}
 })
 
 
--- Lexplore
-	keymap.set('n', '<leader>e', '<cmd>Lexplore<cr>')
-	keymap.set('n', '<leader><leader>', '<leader>e', {remap = true})
