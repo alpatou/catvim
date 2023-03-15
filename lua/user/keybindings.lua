@@ -8,9 +8,10 @@
 local keymap = vim.keymap
 
 vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '
 
-vim.keymap.set({'n', 'x', 'o'}, '<leader>h', '^') -- similar to 0
-vim.keymap.set({'n', 'x', 'o'}, '<leader>l', 'g_') -- similar to $
+keymap.set({'n', 'x', 'o'}, '<leader>h', '^') -- similar to 0
+keymap.set({'n', 'x', 'o'}, '<leader>l', 'g_') -- similar to $
 -- Select all, select one
 keymap.set('n', '<leader>a', ':keepjumps normal! ggVG<cr>')
 keymap.set('n', '<C-a>', 'gg<S-v>G')
@@ -40,5 +41,7 @@ keymap.set('n', '<leader>a', ':keepjumps normal! ggVG<cr>')
 -- Lexplore
 keymap.set('n', '<leader>e', '<cmd>Lexplore<cr>')
 keymap.set('n', '<leader><leader>', '<leader>e', {remap = true})
+
+keymap.set('n', '<leader>l', '<cmd>Lazy<cr>')
 
 
