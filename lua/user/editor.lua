@@ -21,6 +21,7 @@ set.wrap 	= true
 set.breakindent = true
 -- The amount of space on screen a Tab character can occupy. The default value is 8. I think 2 is fine.
 set.tabstop 	= 2
+set.softtabstop = 2
 -- Amount of characters Neovim will use to indent a line. This option influences the keybindings << and >>. The default value is 8. Most of the time we want to set this with same value as tabstop.
 set.shiftwidth	= 2
 -- Controls whether or not Neovim should transform a Tab character to spaces. The default value is false.
