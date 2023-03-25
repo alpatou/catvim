@@ -74,8 +74,9 @@ which_key.register({
   b = {
     "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
     "Buffers",
-  },
   c = { "<cmd>Bdelete!<CR>", "Close Buffer" },
+  },
+	c = { "Code/Lsp" },
 	f = {
 		name = "Find",
 	},
