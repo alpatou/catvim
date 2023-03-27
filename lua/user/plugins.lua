@@ -74,6 +74,7 @@ require('lazy').setup({
 			{'rafamadriz/friendly-snippets'}, -- Optional
 		}
 	},
+	{'jose-elias-alvarez/null-ls.nvim'},
 	{'numToStr/Comment.nvim'},
 	{'tpope/vim-surround'},
 	{'akinsho/toggleterm.nvim'},
