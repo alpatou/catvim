@@ -9,3 +9,6 @@ mv ~/.local/state/nvim ~/.local/state/nvim.bak
 mv ~/.cache/nvim ~/.cache/nvim.bak
 
 ```
+
+Reminder: 
+Clone this as nvim directory 
