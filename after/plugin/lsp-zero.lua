@@ -19,5 +19,7 @@ vim.diagnostic.config({
   update_in_insert = false,
   underline = true,
   severity_sort = false,
-  float = true,
+  -- float = true,
 })
+
+-- vim.api.nvim_buf_set_option('n', '<leader>m', '<cmd>lua vim.lsp.diagnostic.open_float()<CR>' )

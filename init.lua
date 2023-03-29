@@ -4,5 +4,6 @@ require('user.editor')
 require('user.keybindings')
 require('user.cmds')
 require('user.plugins')
+require('user.colorscheme')
 
 

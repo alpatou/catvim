@@ -88,6 +88,6 @@ vim.g.material_theme_style =  'lighter-community'
 vim.opt.termguicolors = true
 
 
-vim.cmd.colorscheme('tokyonight')
+vim.cmd.colorscheme('peachpuff')
 
 
