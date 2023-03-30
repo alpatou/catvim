@@ -25,6 +25,7 @@ vim.opt.rtp:prepend(lazypath)
 require('lazy').setup({
 	{'folke/tokyonight.nvim'},
 	{'kaicataldo/material.vim'},
+	{'savq/melange-nvim'},
   {'nvim-lualine/lualine.nvim'},
 	{"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
 	{
@@ -86,6 +87,7 @@ vim.g.material_terminal_italics = 1
 vim.g.material_theme_style =  'lighter-community' 
 
 vim.opt.termguicolors = true
+vim.opt.bg = 'light'
 
 
 vim.cmd.colorscheme('peachpuff')

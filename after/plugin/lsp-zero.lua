@@ -14,12 +14,11 @@ lsp.setup()
 
 
 vim.diagnostic.config({
-  virtual_text = true,
+  virtual_text = false,
   signs = true,
   update_in_insert = false,
   underline = true,
   severity_sort = false,
-  -- float = true,
+  float = true,
 })
-
--- vim.api.nvim_buf_set_option('n', '<leader>m', '<cmd>lua vim.lsp.diagnostic.open_float()<CR>' )
+vim.api.nvim_set_keymap('n', '<leader>m', '<cmd>lua vim.diagnostic.open_float()<CR>',{ desc = "Show my potatos"})
