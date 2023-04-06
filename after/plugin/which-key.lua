@@ -76,7 +76,7 @@ which_key.register({
     "Buffers",
   c = { "<cmd>Bdelete!<CR>", "Close Buffer" },
   },
-	c = { "Code/Lsp" },
+	d = { name = "Diagnostics/Lsp" },
 	f = {
 		name = "Find",
 	},
