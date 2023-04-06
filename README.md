@@ -1,3 +1,14 @@
+
+<h1 align="center">Behold the Cheruvim!</h1>
+
+![logo](assets/logo.jpg)
+
+
+After tried almost all out of the box distros, i decided to take the best parts (for me), and with divine help,
+ to make my config work. At least now i know where the errors are. 
+
+
+
 ```
 
 # required
