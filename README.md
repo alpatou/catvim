@@ -2,7 +2,7 @@
 <h1 align="center">Behold the Cheruvim!</h1>
 
 ![logo](assets/logo.jpg)
-<img src="assets/logo.jpg" alt= “logo” width="50%" height="50%" aling="center">
+<h1 align="center"><img src="assets/logo.jpg" alt= “logo” width="20%" height="20%" aling="center"></h1>
 
 After tried almost all out of the box distros, i decided to take the best parts (for me), and with divine help,
  to make my config work. At least now i know where the errors are. 
