@@ -1,6 +1,7 @@
-
-local status, tree = pcall(require, "nvim-tree")
-if (not status) then return end
+local status, tree = pcall(require, "neo-tree")
+if not status then
+	return
+end
 -- examples for your init.lua
 --
 
@@ -13,26 +14,24 @@ vim.opt.termguicolors = true
 
 -- OR setup with some options
 tree.setup({
-  sort_by = "case_sensitive",
-  renderer = {
-    group_empty = true,
-  },
-  filters = {
-    dotfiles = false,
-  },
+	sort_by = "case_sensitive",
+	renderer = {
+		group_empty = true,
+	},
+	filters = {
+		dotfiles = false,
+	},
 	update_focused_file = { enable = true },
 	hijack_directories = {
-		auto_open = false
-	}
-
+		auto_open = false,
+	},
 })
 
-
-vim.keymap.set('n', '<leader>e', '<cmd>NvimTreeToggle <cr>',{})
+vim.keymap.set("n", "<leader>e", "<cmd>Neotree toggle position=left<cr>", {})
 
 -- close nvim if only tree is remains open. Contributors are refusing to this thing...
 -- https://github.com/nvim-tree/nvim-tree.lua/issues/1005#issuecomment-1166393398
-vim.api.nvim_create_autocmd('BufEnter', {
-    command = "if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif",
-    nested = true,
+vim.api.nvim_create_autocmd("BufEnter", {
+	command = "if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif",
+	nested = true,
 })
