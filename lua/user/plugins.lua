@@ -2,25 +2,16 @@
 -- == 		Plug 							====
 -- =============================
 
-local lazy = {}
+-- for material
+vim.g.material_terminal_italics = 1
+vim.g.material_theme_style = "lighter-community"
 
--- Install package manager
---    https://github.com/folke/lazy.nvim
---    `:help lazy.nvim.txt` for more info
-local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not vim.loop.fs_stat(lazypath) then
-	vim.fn.system({
-		"git",
-		"clone",
-		"--filter=blob:none",
-		"https://github.com/folke/lazy.nvim.git",
-		"--branch=stable", -- latest stable release
-		lazypath,
-	})
-end
-vim.opt.rtp:prepend(lazypath)
+vim.opt.termguicolors = true
+vim.opt.bg = "light"
 
-require("lazy").setup({
+vim.cmd.colorscheme("peachpuff")
+
+return {
 	{ "folke/tokyonight.nvim" },
 	{ "kaicataldo/material.vim" },
 	{ "savq/melange-nvim" },
@@ -85,13 +76,4 @@ require("lazy").setup({
 	{ "tpope/vim-surround" },
 	{ "akinsho/toggleterm.nvim" },
 	{ "windwp/nvim-autopairs" },
-})
-
--- for material
-vim.g.material_terminal_italics = 1
-vim.g.material_theme_style = "lighter-community"
-
-vim.opt.termguicolors = true
-vim.opt.bg = "light"
-
-vim.cmd.colorscheme("peachpuff")
+}
