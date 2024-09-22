@@ -1,4 +1,4 @@
-require("core.options") -- Load general options
+require("core.editor") -- Load general options
 require("core.keybindings") -- Load general keymaps
 require("core.snippets") -- Custom code snippets
 

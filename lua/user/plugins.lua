@@ -3,11 +3,6 @@
 -- =============================
 
 -- for material
-vim.g.material_terminal_italics = 1
-vim.g.material_theme_style = "lighter-community"
-
-vim.opt.termguicolors = true
-vim.opt.bg = "light"
 
 vim.cmd.colorscheme("peachpuff")
 
