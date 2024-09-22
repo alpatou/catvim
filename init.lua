@@ -1,6 +1,7 @@
 require("core.editor") -- Load general options
 require("core.keybindings") -- Load general keymaps
 require("core.snippets") -- Custom code snippets
+require("core.cmds") -- reload config, maybe it can go to snippets
 
 -- Set up the Lazy plugin manager
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
