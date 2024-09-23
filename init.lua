@@ -31,8 +31,11 @@ require("lazy").setup({
 	require("plugins.misc"),
 	require("plugins.comment"),
 	require("plugins.nvim-autopairs"),
+	-- find way to load it after the plugin
+	--	require("after.plugins.colorcheme"),
 })
 
+-- vim.opt.bg = "light"
 vim.cmd.colorscheme("melange")
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et

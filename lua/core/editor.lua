@@ -27,8 +27,6 @@ set.expandtab = true -- Controls whether or not Neovim should transform a Tab ch
 set.scrolloff = 4 -- Minimal number of screen lines to keep above and below the cursor (default: 0)
 set.sidescrolloff = 8 -- Minimal number of screen columns either side of cursor if wrap is `false` (default: 0)
 
-
 set.termguicolors = true
-set.bg = "light"
 
 set.wildignore:append({ "*/node_modules/*" })

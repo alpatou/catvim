@@ -1,5 +1,5 @@
 return {
-	{ "savq/melange-nvim" },
+	{ "savq/melange-nvim", lazy=false },
 	{
 		"shaunsingh/nord.nvim",
 		lazy = false,
