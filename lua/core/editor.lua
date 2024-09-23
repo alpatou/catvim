@@ -27,8 +27,6 @@ set.expandtab = true -- Controls whether or not Neovim should transform a Tab ch
 set.scrolloff = 4 -- Minimal number of screen lines to keep above and below the cursor (default: 0)
 set.sidescrolloff = 8 -- Minimal number of screen columns either side of cursor if wrap is `false` (default: 0)
 
-set.material_terminal_italics = 1
-set.material_theme_style = "lighter-community"
 
 set.termguicolors = true
 set.bg = "light"
