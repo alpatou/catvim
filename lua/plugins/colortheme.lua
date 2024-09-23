@@ -1,5 +1,9 @@
 return {
-	{ "savq/melange-nvim", lazy=false },
+	{ "savq/melange-nvim", lazy = false },
+	{ "ntk148v/komau.vim" },
+	{ "preservim/vim-colors-pencil" },
+	{ "yorickpeterse/vim-paper" },
+	{ "rebelot/kanagawa.nvim" },
 	{
 		"shaunsingh/nord.nvim",
 		lazy = false,
